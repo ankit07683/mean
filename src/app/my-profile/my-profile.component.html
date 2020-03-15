@@ -10,7 +10,7 @@
             </mat-form-field>
             <mat-form-field>
                 <mat-label>Username</mat-label>
-                <input type="email" matInput #username required placeholder="Enter Your Username" value="{{ userData.name }}" name="username" [(ngModel)] = 'userData.email'>
+                <input type="email" matInput #username required placeholder="Enter Your Username" value="{{ userData.email }}" name="username" [(ngModel)] = 'userData.email'>
                 <mat-error>Enter Username</mat-error>
             </mat-form-field>
             <button type="submit" [disabled]="profileForm.invalid" name="button" class="btn btn-success btn-block mt-3">Update Profile</button>
