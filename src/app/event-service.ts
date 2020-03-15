@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class EventService {
 
   constructor(private http:HttpClient) { }
-  private eventURI = 'http://localhost:3000/api/events';
-  private specialEventsURI = 'http://localhost:3000/api/special_events';
+  private eventURI = 'https://ak-mean.herokuapp.com/api/events';
+  private specialEventsURI = 'https://ak-mean.herokuapp.com/api/special_events';
   events(){
     return this.http.get<any>(this.eventURI);
   }
