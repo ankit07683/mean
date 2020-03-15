@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiURI = 'http://localhost:3000/api/';
+  private apiURI = 'https://ak-mean.herokuapp.com/api/';
 
   response ='';
   error= '';
