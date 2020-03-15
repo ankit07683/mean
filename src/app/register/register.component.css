@@ -1,0 +1,16 @@
+.login-container{
+    margin: 120px auto;
+}
+
+.login-form{
+    max-width: 400px;
+    margin: 0px auto;
+    border: 1px solid #e8e8e8;
+    padding: 15px;
+    box-shadow: 0 0 4px 2px #e8e8e8;
+    border-radius: 10px;
+}
+
+mat-form-field{
+    width: 100%;
+}

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="login-container">
+        <form #profileForm="ngForm" (ngSubmit)="update_profile()" class="login-form">
+            <h2 class="text-center mb-5">Update Your Profile</h2>
+            <p class="text-danger">{{ errorMessage }}</p>
+            <mat-form-field>
+                <mat-label>Your Name</mat-label>
+                <input type="email" matInput #name required placeholder="Enter Your Name" value="{{ userData.name }}" name="name" [(ngModel)] = 'userData.name'>
+                <mat-error>Enter Username</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input type="email" matInput #username required placeholder="Enter Your Username" value="{{ userData.name }}" name="username" [(ngModel)] = 'userData.email'>
+                <mat-error>Enter Username</mat-error>
+            </mat-form-field>
+            <button type="submit" [disabled]="profileForm.invalid" name="button" class="btn btn-success btn-block mt-3">Update Profile</button>
+        </form>
+    </div>
+</div>

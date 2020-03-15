@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="login-container">
+        <form #loginForm="ngForm" (ngSubmit)="proceed_login()" class="login-form">
+            <h2 class="text-center mb-5">Login</h2>
+            <p class="text-danger">{{ errorMessage }}</p>
+            <mat-form-field>
+                <mat-label>USERNAME</mat-label>
+                <input type="email" matInput #username required placeholder="Enter Your Username" name="username" [(ngModel)] = 'loginUserData.email'>
+                <mat-error>Enter Username</mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>PASSWORD</mat-label>
+                <input matInput #password required placeholder="Enter Your Password" name="password" [(ngModel)] = 'loginUserData.password'>
+                <mat-error>Enter Password</mat-error>
+            </mat-form-field>
+            <button type="submit" [disabled]="loginForm.invalid" name="button" class="btn btn-success btn-block mt-3">Login</button>
+            <p class="text-center mt-5">Don't have an account? <a [routerLink]="['/ register']" routerLinkActive="active" class="ml-2">Register</a></p>
+        </form>
+    </div>
+</div>

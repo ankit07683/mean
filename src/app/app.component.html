@@ -1,0 +1,79 @@
+
+
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink='/'>Event Hub</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/events']" routerLinkActive="active">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/premium-events']" routerLinkActive="active">Premium Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/about-project']" routerLinkActive="active">About Project</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav my-2 my-lg-0">
+        <li class="nav-item" *ngIf="!auth.isLogin()">
+          <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="!auth.isLogin()">
+          <a class="nav-link" [routerLink]="['/register']" routerLinkActive="active">Register</a>
+        </li>
+        <li class="nav-item" *ngIf="auth.isLogin()">
+          <a class="nav-link" [routerLink]="['/my-profile']" routerLinkActive="active">My Profile</a>
+        </li>
+        <li class="nav-item" *ngIf="auth.isLogin()">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  <!-- Footer -->
+  <footer>
+      <div class="row">
+        <div class="col-md-3">
+          <h3>About Project</h3>
+          <p>My name is ANKIT KUMAR JAIN. and i have created this project to demonstrate the practical use of MEAN Stack Development.</p>
+        </div>
+        <div class="col-md-4 list">
+          <ul>
+            <li><a [routerLink]="['/']" routerLinkActive="active">Home</a></li>
+            <li><a [routerLink]="['/events']" routerLinkActive="active">Events</a></li>
+            <li><a [routerLink]="['/premium-events']" routerLinkActive="active">Premium Events</a></li>
+            <li><a [routerLink]="['/about-project']" routerLinkActive="active">About Project</a></li>
+          </ul>
+        </div>
+        
+        <div class="col-md-5">
+          <h5><strong>Contact Info</strong></h5>
+          <p><strong>Adress:</strong>164/267, Pratapnagar, Jaipur, Rajasthan, India 302033</p>
+          <p><strong>Email:</strong> ankit07683@gmail.com</p>
+          <p><strong>Tel.:</strong> +91 7737615734</p>
+        </div>
+      </div>
+  </footer>
+</div>
+<!-- ./Footer -->
+<!-- Bootstrap core JavaScript
+  ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/vendor/holder.min.js"></script>
+<script>
+  Holder.addTheme('thumb', {
+    bg: '#55595c',
+    fg: '#eceeef',
+    text: 'Thumbnail'
+  });
+</script>
+
